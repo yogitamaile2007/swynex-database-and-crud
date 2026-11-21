@@ -1,0 +1,110 @@
+{
+  "info": {
+    "name": "SWYNEX Database and CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Create student (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rahul Patil\",\n  \"email\": \"rahul@example.com\",\n  \"course\": \"Java Full Stack\",\n  \"age\": 21\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Get all students (GET)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students"
+        }
+      }
+    },
+    {
+      "name": "3. Get student by id (GET)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1"
+        }
+      }
+    },
+    {
+      "name": "4. Update student (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rahul Patil\",\n  \"email\": \"rahul@example.com\",\n  \"course\": \"Spring Boot\",\n  \"age\": 22\n}"
+        }
+      }
+    },
+    {
+      "name": "5. Delete student (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1"
+        }
+      }
+    },
+    {
+      "name": "6. Validation error test (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/students"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"\",\n  \"email\": \"wrong-email\",\n  \"course\": \"\",\n  \"age\": 5\n}"
+        }
+      }
+    }
+  ]
+}
